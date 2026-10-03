@@ -1,0 +1,34 @@
+/*
+  تنسيق صفحتي أداة البريد: خط مقروء، وعرض مريح على الجوال والكمبيوتر، ووضع ليلي تلقائي.
+  لو غاب الملف ظهرت الصفحتان بلا تنسيق، والمحتوى سليم.
+*/
+:root {
+  --bg: #ffffff;
+  --text: #1f2328;
+  --muted: #59636e;
+  --link: #0969da;
+  --rule: #d1d9e0;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --text: #e6edf3;
+    --muted: #9198a1;
+    --link: #4493f8;
+    --rule: #3d444d;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+main { max-width: 680px; margin: 0 auto; padding: 48px 16px 64px; }
+h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 8px; }
+h2 { font-size: 1.15rem; margin: 32px 0 8px; padding-top: 16px; border-top: 1px solid var(--rule); }
+p { margin: 0 0 12px; }
+a { color: var(--link); }
+.meta, .nav { color: var(--muted); font-size: 0.95rem; }
+.nav { margin-bottom: 24px; }
